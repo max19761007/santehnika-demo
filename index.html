@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Тройник · магазин сантехники</title>
+<meta name="description" content="Магазин сантехники: смесители, трубы и фитинги, унитазы, краны, отопление. Пришлите фото старой детали – подберём такую же, скажем, есть ли в наличии, и отложим до вашего приезда.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Тройник">
+<meta property="og:title" content="Тройник · магазин сантехники">
+<meta property="og:description" content="Пришлите фото старой детали – подберём такую же и отложим до вашего приезда.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231747c4%27/%3E%3Cpath d=%27M7 10h18v5h-6.5v11h-5V15H7z%27 fill=%27%23e8eced%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- тема «Фарфор + кобальт»: шесть цветов, два шрифта -------------------- */
+  .v-page {
+    --v-canvas: #e8eced; --v-surface: #f8fafa;
+    --v-ink: #13202c; --v-ink-soft: #52606c;
+    --v-accent: #1747c4; --v-accent-ink: #ffffff;
+    --v-font-display: "Geologica", "Segoe UI", system-ui, sans-serif;
+    --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 19 32 44;
+    --v-radius: 12px;
+    --v-display-weight: 500;
+    --v-track-tight: -0.022em;
+    --v-hair: rgb(19 32 44 / .13);
+    --v-hair-strong: rgb(19 32 44 / .26);
+  }
+  html, body { background: #e8eced; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .v-page .v-btn { font-size: var(--v-t-base); }
+  .v-page .v-label { text-transform: none; letter-spacing: .01em; font-size: var(--v-t-sm); font-weight: 500; }
+
+  /* плашка «демо по заказу» – снимается перед переносом в Тильду */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; margin-bottom: var(--v-5); padding: .45em 1em .45em .5em; border-radius: 999px;
+    background: rgb(248 250 250 / .9); box-shadow: inset 0 0 0 1px var(--v-hair); font-size: var(--v-t-sm); color: var(--v-ink); }
+  .demo-for i { width: 1.9em; height: 1.9em; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-weight: 600;
+    background: var(--v-accent); color: var(--v-accent-ink); font-size: .85em; }
+
+  /* слот: значение, которое даст заказчик */
+  .slot { border-bottom: 1px dashed currentColor; padding-bottom: .02em; }
+
+  /* ---- шапка ------------------------------------------------------------------ */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(232 236 237 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); letter-spacing: -.01em; text-decoration: none;
+    display: inline-flex; align-items: center; gap: .45em; min-height: 44px; }
+  .bar__mark svg { width: 1.05em; height: 1.05em; flex: none; }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 600; font-size: var(--v-t-sm); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; font-size: .92rem; }
+  }
+
+  /* ---- 1 · hero: продавец крутит старый смеситель -------------------------------- */
+  .hero__img img { width: 108%; height: 112%; left: -4%; top: -6%; object-fit: cover; object-position: 70% 40%; }
+  .hero__veil { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(90deg, rgb(232 236 237 / .94) 0%, rgb(232 236 237 / .82) 30%, rgb(232 236 237 / .2) 52%, transparent 66%); }
+  .hero__copy { bottom: clamp(2.5rem, 9vh, 6rem); max-width: min(44rem, 50vw); }
+  .hero__copy .v-display { font-size: clamp(2.2rem, 1.1rem + 2.6vw, 3.9rem); line-height: 1.02; }
+  .hero__label { display: block; margin-bottom: var(--v-4); }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 36ch; }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3) var(--v-6); margin-top: var(--v-6); }
+  .hero__tel { text-decoration: none; font-size: var(--v-t-sm); display: inline-flex; align-items: center; gap: .35em; min-height: 44px; }
+  .hero__tel b { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+  @media (max-width: 860px) {
+    .hero__img img { width: 100%; height: 66%; left: 0; top: 0; object-position: 50% 30%;
+      -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent); mask-image: linear-gradient(to bottom, #000 70%, transparent); }
+    .hero__veil { background: linear-gradient(to top, var(--v-canvas) 0%, var(--v-canvas) 40%, rgb(232 236 237 / .7) 52%, transparent 64%); }
+    .hero__copy { top: auto; bottom: clamp(1.5rem, 4vh, 3rem); transform: none; max-width: none; }
+    .hero__copy .v-display { font-size: clamp(1.9rem, 1.2rem + 3.6vw, 2.6rem); }
+    .hero__copy .v-lede { font-size: var(--v-t-base); margin-top: var(--v-4); }
+    .hero__cta { margin-top: var(--v-5); }
+    .demo-for { margin-bottom: var(--v-4); font-size: .82rem; }
+  }
+
+  /* ---- 2 · цена бездействия -------------------------------------------------------- */
+  .poka { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-9); align-items: start; }
+  .rows li { padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); display: grid; gap: var(--v-1); }
+  .rows li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .rows h3 { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); line-height: 1.2; letter-spacing: -.01em; }
+  .rows p { color: var(--v-ink-soft); max-width: 46ch; text-wrap: pretty; }
+  .turn { padding: var(--v-5) var(--v-6); border-radius: var(--v-radius); background: var(--v-accent); color: var(--v-accent-ink); display: grid; gap: var(--v-2); }
+  .turn b { font-weight: 600; }
+  .turn p { font-size: var(--v-t-lg); line-height: 1.35; text-wrap: pretty; max-width: 38ch; }
+  .poka__fig { position: sticky; top: clamp(5rem, 12vh, 7rem); aspect-ratio: 4 / 3; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+  .poka__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .poka__fig figcaption { position: absolute; left: var(--v-5); bottom: var(--v-5); right: var(--v-5); z-index: 1; color: #f4f6f7; font-size: var(--v-t-sm); }
+  .poka__fig::after { content: ""; position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(to top, rgb(10 18 26 / .75), transparent); pointer-events: none; }
+  @media (max-width: 860px) {
+    .poka { grid-template-columns: 1fr; gap: var(--v-7); }
+    .poka__fig { position: relative; top: 0; }
+    .turn { padding: var(--v-5); }
+  }
+
+  /* ---- 3 · фирменный ход: «было → подобрали» от --v-p ---------------------------- */
+  #obrazec { --k: clamp(0, calc((var(--v-p, 0) - .14) / .6), 1); }
+  .swap__img { position: absolute; inset: 0; }
+  .swap__img img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; }
+  .swap__img--new { clip-path: inset(0 0 0 calc((1 - var(--k)) * 100%)); }
+  .swap__seam { position: absolute; z-index: 2; top: 0; bottom: 0; width: 3px; margin-left: -1.5px; background: var(--v-accent);
+    left: calc((1 - var(--k)) * 100%); opacity: calc(1 - var(--k) * var(--k) * var(--k)); pointer-events: none; }
+  .swap__tag { position: absolute; z-index: 3; top: clamp(5rem, 12vh, 7rem); padding: .4em .9em; border-radius: 999px; font-size: var(--v-t-sm); font-weight: 500;
+    background: rgb(248 250 250 / .92); color: var(--v-ink); box-shadow: var(--v-e1); }
+  .swap__tag--old { right: var(--v-gutter); opacity: calc(1 - var(--k) * 2); }
+  .swap__tag--new { right: var(--v-gutter); opacity: calc(var(--k) * 2 - 1); background: var(--v-accent); color: var(--v-accent-ink); }
+  .swap__veil { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(90deg, rgb(232 236 237 / .95) 0%, rgb(232 236 237 / .8) 26%, transparent 50%); }
+  .swap__copy { bottom: auto; top: 50%; transform: translateY(-50%); max-width: min(30rem, 38vw); }
+  .swap__copy .v-display { font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3.2rem); line-height: 1.05; }
+  .swap__copy p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 34ch; text-wrap: pretty; }
+  .swap__step { display: block; margin-bottom: var(--v-3); color: var(--v-accent); font-weight: 600; font-size: var(--v-t-sm); }
+  @media (max-width: 860px) {
+    .swap__img img { object-position: 60% 50%; height: 56%; }
+    .swap__veil { background: linear-gradient(to top, var(--v-canvas) 0%, var(--v-canvas) 44%, transparent 58%); }
+    .swap__seam { bottom: 44%; }
+    .swap__copy { top: auto; bottom: calc(5.5rem + env(safe-area-inset-bottom)); transform: none; max-width: none; }
+    .swap__copy .v-display { font-size: var(--v-t-xl); }
+    .swap__tag { top: 4.6rem; }
+  }
+
+  /* ---- 4 · что на полках ------------------------------------------------------------- */
+  .shelf { display: grid; grid-template-columns: 1.35fr .65fr; gap: var(--v-9); align-items: start; }
+  .cats { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--v-7); }
+  .cats li { padding: var(--v-4) 0 var(--v-5); border-top: 1px solid var(--v-hair); }
+  .cats h3 { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); line-height: 1.2; letter-spacing: -.01em; margin-bottom: var(--v-1); }
+  .cats p { color: var(--v-ink-soft); font-size: var(--v-t-sm); text-wrap: pretty; }
+  .shelf__note { color: var(--v-ink-soft); max-width: 58ch; }
+  .shelf__fig { position: sticky; top: clamp(5rem, 12vh, 7rem); aspect-ratio: 3 / 4; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+  .shelf__fig img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 1000px) { .cats { grid-template-columns: 1fr; } }
+  @media (max-width: 860px) {
+    .shelf { grid-template-columns: 1fr; gap: var(--v-7); }
+    .shelf__fig { position: relative; top: 0; aspect-ratio: 4 / 3; }
+  }
+
+  /* ---- 5 · новости из группы ВК с фильтром ----------------------------------------- */
+  .news__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: var(--v-5); margin-bottom: var(--v-6); }
+  .news__head p { color: var(--v-ink-soft); max-width: 52ch; margin-top: var(--v-3); }
+  .filter { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .filter button { min-height: 44px; padding: 0 1.1em; border-radius: 999px; font-size: var(--v-t-sm); font-weight: 500;
+    box-shadow: inset 0 0 0 1px var(--v-hair-strong); transition: background-color .16s var(--v-ease-out), color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+  .filter button[aria-pressed="true"] { background: var(--v-ink); color: var(--v-canvas); box-shadow: none; }
+  @media (hover: hover) and (pointer: fine) { .filter button:not([aria-pressed="true"]):hover { box-shadow: inset 0 0 0 1px var(--v-ink); } }
+  .feed { display: grid; grid-template-columns: 1.3fr 1fr; gap: 0 var(--v-7); }
+  .post { display: grid; grid-template-columns: auto 1fr; gap: var(--v-1) var(--v-4); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair);
+    animation: postIn .32s var(--v-ease-out) both; }
+  .post[hidden] { display: none; }
+  .post--text { grid-template-columns: 1fr; }
+  .post__img { grid-row: 1 / span 3; width: 5.5rem; aspect-ratio: 1; border-radius: 8px; object-fit: cover; }
+  .post__meta { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .post__meta b { color: var(--v-accent); font-weight: 600; }
+  .post__text { text-wrap: pretty; max-width: 52ch; }
+  .post--big { grid-row: span 3; grid-template-columns: 1fr; align-content: start; }
+  .post--big .post__img { grid-row: auto; width: 100%; aspect-ratio: 16 / 9; margin-bottom: var(--v-3); border-radius: var(--v-radius); }
+  .post--big .post__text { font-size: var(--v-t-lg); line-height: 1.4; }
+  @keyframes postIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .news__foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--v-4); margin-top: var(--v-6); padding-top: var(--v-5); border-top: 1px solid var(--v-hair);
+    font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .news__foot a { font-weight: 600; color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; }
+  .news__empty { padding: var(--v-6) 0; color: var(--v-ink-soft); border-top: 1px solid var(--v-hair); }
+  @media (max-width: 860px) {
+    .feed { grid-template-columns: 1fr; }
+    .post--big { grid-row: auto; }
+    .post__img { width: 4.5rem; }
+  }
+
+  /* ---- 6 · как купить ------------------------------------------------------------------- */
+  .buy { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--v-9); align-items: start; }
+  .terms li { display: grid; grid-template-columns: 11rem 1fr; gap: var(--v-1) var(--v-5); padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); }
+  .terms li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .terms strong { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); line-height: 1.25; }
+  .terms span { color: var(--v-ink-soft); text-wrap: pretty; }
+  @media (max-width: 860px) {
+    .buy { grid-template-columns: 1fr; gap: var(--v-6); }
+    .terms li { grid-template-columns: 1fr; }
+  }
+
+  /* ---- 7 · финал ------------------------------------------------------------------------ */
+  .close { padding: clamp(5rem, 14vh, 9rem) var(--v-gutter) var(--v-7); background: var(--v-ink); color: #eef2f4;
+    background-image: radial-gradient(50rem 36rem at calc(var(--v-mx, .3) * 100%) calc(var(--v-my, .4) * 100%), rgb(23 71 196 / .45), transparent 60%); }
+  .close .v-soft, .close__meta { color: #a9b6c1; }
+  .close__inner { width: min(100%, 76rem); margin-inline: auto; display: grid; grid-template-columns: 1.2fr .8fr; gap: var(--v-9); padding-bottom: var(--v-9); }
+  .close .v-lede { margin-top: var(--v-5); max-width: 38ch; }
+  .close__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .close .v-btn { --v-accent: #f8fafa; --v-accent-ink: #13202c; }
+  .close__tel { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+  .close__meta { display: grid; gap: var(--v-4); align-content: start; padding-top: var(--v-2); }
+  .close__meta b { display: block; color: #eef2f4; font-weight: 600; margin-bottom: .15em; }
+  .close__meta a { color: #eef2f4; }
+  .foot { width: min(100%, 76rem); margin-inline: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--v-4);
+    padding-top: var(--v-5); border-top: 1px solid rgb(238 242 244 / .16); font-size: var(--v-t-xs); color: #a9b6c1; }
+  @media (max-width: 860px) {
+    .close { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
+    .close__inner { grid-template-columns: 1fr; gap: var(--v-7); padding-bottom: var(--v-7); }
+    .close__tel { font-size: var(--v-t-lg); }
+  }
+
+  /* ---- телефон: кнопка внизу, когда кнопка hero ушла --------------------------------- */
+  .dock { display: none; }
+  @media (max-width: 860px) {
+    .dock { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 32; justify-content: space-between; align-items: center; gap: var(--v-3);
+      padding: .6rem var(--v-gutter) calc(.6rem + env(safe-area-inset-bottom)); background: rgb(232 236 237 / .95);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -1px 0 var(--v-hair);
+      transition: transform .28s var(--v-ease-out), opacity .28s var(--v-ease-out); }
+    .dock span { font-size: .95rem; color: var(--v-ink-soft); }
+    .dock .v-btn { min-height: 46px; padding: 0 1.2em; font-size: .95rem; }
+    .dock.is-hidden { transform: translateY(110%); opacity: 0; pointer-events: none; }
+    .v-page.dock-on .bar .v-btn { display: none; }
+    .cats p, .post__meta, .news__foot, .poka__fig figcaption, .hero__tel { font-size: .95rem; }
+  }
+
+  /* узкие телефоны и «крупный текст» в настройках: шапка и заголовки не шире экрана. Стоит последним. */
+  @media (max-width: 480px) {
+    .bar { gap: var(--v-2); }
+    .bar__mark { font-size: min(1.15rem, 4.6vw); flex: none; }
+    .bar .v-btn { padding: 0 .85em; font-size: min(.92rem, 3.9vw); flex: none; }
+    .demo-for { font-size: min(.82rem, 3.4vw); }
+    /* лейбл категорий ложится на пёструю часть фото – на узком экране его роль играет заголовок */
+    .hero__label { display: none; }
+    .hero__veil { background: linear-gradient(to top, var(--v-canvas) 0%, var(--v-canvas) 46%, rgb(232 236 237 / .75) 56%, transparent 68%); }
+    .v-page .hero__copy .v-display { font-size: min(2.3rem, 8.4vw); }
+    .v-page .v-display--lg { font-size: min(1.9rem, 7.6vw); }
+    .v-page .v-display--md, .v-page .swap__copy .v-display { font-size: min(1.7rem, 7vw); }
+    .v-page :is(.rows, .cats) h3, .v-page .terms strong { font-size: min(1.15rem, 4.8vw); }
+    .v-page .close__tel { font-size: min(1.4rem, 6.2vw); }
+    .dock span { display: none; }
+    .dock { justify-content: center; }
+    .dock .v-btn { flex: 1; justify-content: center; }
+  }
+  @media (max-width: 480px) and (max-height: 700px) {
+    .v-page .hero__copy .v-lede { display: none; }
+  }
+
+  /* «Уменьшить движение» / «Убрать анимацию» (на Android – с энергосбережением) и печать:
+     движок показывает все реплики сразу, поэтому сцену «было → подобрали» раскладываем: два фото рядом, шаги под ними */
+  @media (prefers-reduced-motion: reduce), print {
+    .v-page #obrazec { height: auto; }
+    .v-page #obrazec [data-v-stage] { position: static; height: auto; overflow: visible; display: grid; grid-template-columns: repeat(6, 1fr);
+      gap: var(--v-6) var(--v-5); width: min(100% - 2 * var(--v-gutter), 76rem); margin-inline: auto; padding-block: var(--v-section); }
+    .v-page .swap__img { position: relative; grid-column: span 3; aspect-ratio: 16 / 10; border-radius: var(--v-radius); overflow: hidden; clip-path: none; }
+    .v-page .swap__img img { height: 100%; }
+    .v-page .swap__img::after { content: "Было"; position: absolute; left: var(--v-4); top: var(--v-4); padding: .3em .8em; border-radius: 999px;
+      background: rgb(248 250 250 / .92); color: var(--v-ink); font-size: var(--v-t-sm); }
+    .v-page .swap__img--new::after { content: "Подобрали"; background: var(--v-accent); color: var(--v-accent-ink); }
+    .v-page .swap__seam, .v-page .swap__tag, .v-page .swap__veil { display: none; }
+    .v-page .swap__copy { position: static; grid-column: span 2; transform: none; max-width: none; }
+    @media (max-width: 860px) {
+      .v-page #obrazec [data-v-stage] { grid-template-columns: 1fr; }
+      .v-page .swap__img, .v-page .swap__copy { grid-column: auto; }
+    }
+  }
+  @media print {
+    .bar, .dock, [data-v-progress] { position: static; }
+    .v-page #top { height: auto; }
+    .v-page #top [data-v-stage] { position: relative; height: 100vh; }
+  }
+
+  /* старые браузеры (Safari до iOS 15.4, Chrome до 108, встроенные браузеры приложений) не знают svh:
+     без этого блока закреплённые сцены схлопываются в ноль и всё ложится в один экран */
+  @supports not (height: 100svh) {
+    .v-page [data-v-act="pin"], .v-page [data-v-act="pan"] { height: calc(var(--v-span, 2) * 100vh); }
+    .v-page [data-v-act="pin"] [data-v-stage], .v-page [data-v-act="pan"] [data-v-stage] { height: 100vh; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1747c4"/><path d="M7 10h18v5h-6.5v11h-5V15H7z" fill="#e8eced"/></svg>
+      <span data-slot="название">Тройник</span>
+    </a>
+    <nav class="bar__right" aria-label="Связь с магазином">
+      <a class="bar__tel" href="tel:+70000000000"><span class="slot" data-slot="телефон">телефон магазина</span></a>
+      <a class="v-btn" href="#kontakty">Написать в магазин</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1 · УЗНАВАНИЕ: продавец за прилавком крутит старый смеситель -->
+    <section id="top" data-v-act="pin" data-v-span="2.2" data-v-drift="#e8eced" aria-label="Магазин сантехники">
+      <div data-v-stage>
+        <div class="v-layer hero__img" data-v-parallax="-0.6">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="Продавец за прилавком магазина сантехники проверяет резьбу на старом смесителе, за ним стена смесителей" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.8 0">
+          <span class="demo-for" data-demo><i aria-hidden="true">P</i>Демо для plansan23 · по заказу «Создать сайт визитку»</span>
+          <span class="v-label hero__label">Смесители, трубы и фитинги, унитазы, краны, отопление</span>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Магазин сантехники в <span class="slot" data-slot="город">вашем городе</span>: подберём деталь по фото</h1>
+          <p class="v-lede">Пришлите фото старого смесителя или фитинга – скажем, что подойдёт, есть ли в наличии, и отложим до вашего приезда.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="#kontakty">Написать в магазин</a>
+            <a class="hero__tel" href="tel:+70000000000">или позвоните <b class="slot" data-slot="телефон">телефон</b></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ЦЕНА БЕЗДЕЙСТВИЯ и ПОВОРОТ -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#e3e8ea" id="pochemu" aria-label="Почему подбираем по образцу">
+      <div class="v-wrap poka">
+        <div class="v-stack" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Не та резьба – второй раз в магазин</h2>
+          <ul class="rows">
+            <li><h3>Купили на глаз</h3><p>Полдюйма или три четверти, внутренняя резьба или наружная – дома выясняется, что не встаёт. А воду уже перекрыли.</p></li>
+            <li><h3>Заказали на маркетплейсе</h3><p>Неделя ожидания, и потрогать нельзя. Не подошло – возврат, и снова ждать.</p></li>
+            <li><h3>В гипермаркете не у кого спросить</h3><p>Стоите у стенда со смесителями и сравниваете фото на телефоне с коробками.</p></li>
+          </ul>
+          <div class="turn">
+            <b>Поэтому подбираем по образцу</b>
+            <p>Пришлите фото или принесите старую деталь – сверим и подберём такую же или лучше.</p>
+          </div>
+        </div>
+        <figure class="poka__fig" data-v-reveal="right" data-v-reveal-at="0.1 0.42">
+          <img src="assets/rezba.webp" srcset="assets/rezba-800.webp 800w, assets/rezba.webp 1400w" sizes="(max-width: 860px) 100vw, 44vw" alt="На ладонях старый латунный фитинг и новый, заметно меньшего диаметра" loading="lazy" decoding="async">
+          <figcaption>Похожи, но резьба другая</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3 · ФИРМЕННЫЙ ХОД: старый смеситель сменяется новым по мере прокрутки -->
+    <section id="obrazec" data-v-act="pin" data-v-span="2.6" data-v-drift="#e8eced" aria-label="Как подбираем по фото">
+      <div data-v-stage>
+        <div class="swap__img"><img src="assets/staryi.webp" srcset="assets/staryi-900.webp 900w, assets/staryi.webp 1920w" sizes="100vw" alt="Старый смеситель в известковом налёте и изношенная подводка" loading="lazy" decoding="async"></div>
+        <div class="swap__img swap__img--new"><img src="assets/novyi.webp" srcset="assets/novyi-900.webp 900w, assets/novyi.webp 1920w" sizes="100vw" alt="Новый смеситель той же формы и новая подводка на том же месте" loading="lazy" decoding="async"></div>
+        <div class="swap__seam" aria-hidden="true"></div>
+        <span class="swap__tag swap__tag--old" aria-hidden="true">Было</span>
+        <span class="swap__tag swap__tag--new" aria-hidden="true">Подобрали</span>
+        <div class="swap__veil" aria-hidden="true"></div>
+
+        <div class="v-copy v-copy--lead swap__copy" data-v-cue="0 0.31 0 0.04">
+          <span class="swap__step">Шаг 1 из 3</span>
+          <h2 class="v-display">Сфотографируйте старую деталь</h2>
+          <p>Целиком и крупно резьбу. Если рядом лежит рулетка – совсем хорошо.</p>
+        </div>
+        <div class="v-copy v-copy--lead swap__copy" data-v-cue="0.35 0.66 0.04 0.03">
+          <span class="swap__step">Шаг 2 из 3</span>
+          <h2 class="v-display">Сверим резьбу, диаметр и размеры</h2>
+          <p>Подберём такую же или лучше и скажем, что есть на полке, а что привезём.</p>
+        </div>
+        <div class="v-copy v-copy--lead swap__copy" data-v-cue="0.67 1 0.03 0">
+          <span class="swap__step">Шаг 3 из 3</span>
+          <h2 class="v-display">Отложим – заберёте сегодня</h2>
+          <p>Деталь ждёт вас на кассе. Старую можно взять с собой – сверим ещё раз при вас.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ВЫБОР: что на полках -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#edf0f0" id="assortiment" aria-label="Ассортимент">
+      <div class="v-wrap shelf">
+        <div class="v-stack" data-v-in data-v-stagger="50">
+          <h2 class="v-display v-display--lg">Что на полках</h2>
+          <p class="shelf__note">Для ремонта, замены и срочной починки. Нет нужного – закажем и сообщим, когда привезут.</p>
+          <ul class="cats">
+            <li><h3>Смесители и душ</h3><p>Кухня, ванна, раковина. Картриджи, аэраторы и лейки к ним.</p></li>
+            <li><h3>Трубы и фитинги</h3><p>Полипропилен, металлопласт, нержавейка, канализация.</p></li>
+            <li><h3>Унитазы, раковины, ванны</h3><p>И всё для установки: гофры, крепёж, сифоны, арматура бачка.</p></li>
+            <li><h3>Краны, фильтры, счётчики</h3><p>Шаровые краны, фильтры грубой очистки, счётчики воды.</p></li>
+            <li><h3>Отопление</h3><p>Радиаторы, терморегуляторы, краны Маевского, комплектующие.</p></li>
+            <li><h3>Подводка и мелочи</h3><p>Гибкая подводка, прокладки, лён, фум-лента, герметики.</p></li>
+          </ul>
+        </div>
+        <figure class="shelf__fig" data-v-in data-v-in-self>
+          <img src="assets/polki.webp" srcset="assets/polki-700.webp 700w, assets/polki.webp 1100w" sizes="(max-width: 860px) 100vw, 30vw" alt="Стеллажи магазина: фитинги в ящиках, шаровые краны, трубы" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5 · НОВОСТИ ИЗ ГРУППЫ ВК: лента с фильтром по тегам (в демо – пример) -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#e8eced" id="novosti" aria-label="Новости магазина">
+      <div class="v-wrap">
+        <div class="news__head" data-v-in data-v-stagger="60">
+          <div>
+            <h2 class="v-display v-display--md">Новости магазина</h2>
+            <p>Посты из нашей группы ВКонтакте появляются здесь сами. Выберите, что показывать.</p>
+          </div>
+          <div class="filter" role="group" aria-label="Фильтр новостей">
+            <button type="button" data-tag="all" aria-pressed="true">Все</button>
+            <button type="button" data-tag="postuplenie" aria-pressed="false">Поступления</button>
+            <button type="button" data-tag="akciya" aria-pressed="false">Акции</button>
+            <button type="button" data-tag="rezhim" aria-pressed="false">Режим работы</button>
+          </div>
+        </div>
+        <div class="feed" id="feed" aria-live="polite"></div>
+        <div class="news__foot">
+          <span>Пример ленты для демо. На сайте здесь будут настоящие посты группы, отобранные по тегам.</span>
+          <a href="#kontakty"><span class="slot" data-slot="ссылка-вк">Группа ВКонтакте</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · КАК КУПИТЬ -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#e3e8ea" id="kak-kupit" aria-label="Как купить">
+      <div class="v-wrap buy">
+        <div data-v-in>
+          <h2 class="v-display v-display--md">Как купить</h2>
+        </div>
+        <ul class="terms" data-v-in data-v-stagger="60">
+          <li><strong>Отложим</strong><span>Напишите или позвоните – держим деталь на кассе <span class="slot" data-slot="срок-брони">до конца дня</span>.</span></li>
+          <li><strong>Самовывоз</strong><span>Из магазина: <span class="slot" data-slot="адрес">адрес магазина</span>, <span class="slot" data-slot="часы">часы работы</span>.</span></li>
+          <li><strong>Доставка</strong><span><span class="slot" data-slot="доставка">Условия доставки по городу</span>.</span></li>
+          <li><strong>Оплата</strong><span><span class="slot" data-slot="оплата">Наличные, карта, перевод</span>.</span></li>
+          <li><strong>Не подошло</strong><span>Обменяем или вернём деньги, если деталь не устанавливали и сохранили упаковку.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ -->
+    <section data-v-act="flow" id="kontakty" aria-label="Контакты">
+      <div class="close" data-v-spotlight>
+        <div class="close__inner">
+          <div data-v-in data-v-stagger="80">
+            <h2 class="v-display v-display--lg">Пришлите фото старой детали</h2>
+            <p class="v-lede">Ответим, что подойдёт и есть ли в наличии. Подходит – отложим до вашего приезда.</p>
+            <div class="close__cta">
+              <a class="v-btn" href="#kontakty" data-v-magnet="0.22" data-v-rise="0">Написать в магазин</a>
+              <a class="close__tel" href="tel:+70000000000"><span class="slot" data-slot="телефон">телефон магазина</span></a>
+            </div>
+          </div>
+          <div class="close__meta" data-v-in data-v-stagger="60">
+            <span><b>Адрес</b><span class="slot" data-slot="адрес">адрес магазина</span>, <span class="slot" data-slot="город">город</span></span>
+            <span><b>Часы работы</b><span class="slot" data-slot="часы">пн–сб 9:00–19:00</span></span>
+            <span><b>Новости и поступления</b><a href="#novosti"><span class="slot" data-slot="ссылка-вк">группа ВКонтакте</span></a></span>
+            <span><b>Как доехать</b><a href="#kontakty"><span class="slot" data-slot="ссылка-карты">открыть на Яндекс.Картах</span></a></span>
+          </div>
+        </div>
+        <footer class="foot">
+          <span><span data-slot="название">Тройник</span> · магазин сантехники</span>
+          <span><span class="slot" data-slot="юрлицо">ИП, ИНН</span></span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="dock is-hidden" id="dock">
+    <span>Подберём по фото</span>
+    <a class="v-btn" href="#kontakty">Написать в магазин</a>
+  </div>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('top').setAttribute('data-v-span', '1.7');
+    document.querySelector('#top .hero__copy').setAttribute('data-v-cue', '0 1 0 0');
+    document.getElementById('obrazec').setAttribute('data-v-span', '2.4');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px; на телефоне нижняя кнопка, когда кнопка hero ушла.
+  (function () {
+    var bar = document.querySelector('.bar'), page = document.querySelector('.v-page');
+    var dock = document.getElementById('dock'), heroBtn = document.querySelector('#top .hero__cta .v-btn'), fin = document.getElementById('kontakty');
+    var on = null, hid = null;
+    function tick() {
+      var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); }
+      var h = heroBtn.getBoundingClientRect().bottom > 0 || fin.getBoundingClientRect().top < window.innerHeight * .6;
+      if (h !== hid) { hid = h; dock.classList.toggle('is-hidden', h); page.classList.toggle('dock-on', !h); }
+    }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Новости из группы ВК. В демо – пример; в работе массив приходит JSON-ом из VK API (wall.get),
+  // тег берётся из хэштега поста: #поступление, #акция, #режим.
+  (function () {
+    var posts = [
+      { tag: 'postuplenie', date: '1 октября', img: 'assets/novyi-900.webp', big: true,
+        text: 'Привезли кухонные смесители с высоким изливом и гибкую подводку 30–150 см. Если меняете смеситель целиком – пришлите фото старого, подберём по размерам.' },
+      { tag: 'rezhim', date: '29 сентября', text: 'В воскресенье работаем до 15:00. Отложенные заказы можно забрать до закрытия.' },
+      { tag: 'akciya', date: '26 сентября', img: 'assets/polki-700.webp', text: 'Готовимся к отопительному сезону: краны Маевского, терморегуляторы и прокладки для радиаторов – на отдельном стенде у входа.' },
+      { tag: 'postuplenie', date: '22 сентября', text: 'Пришла партия полипропиленовых труб и фитингов 20, 25 и 32 мм. Нарежем трубу по вашей длине.' },
+      { tag: 'akciya', date: '15 сентября', text: 'При покупке смесителя подводку подберём и проверим на месте, чтобы дома всё встало с первого раза.' }
+    ];
+    var names = { postuplenie: 'Поступление', akciya: 'Акция', rezhim: 'Режим работы' };
+    var feed = document.getElementById('feed'), btns = document.querySelectorAll('.filter button');
+    function render(tag) {
+      var list = posts.filter(function (p) { return tag === 'all' || p.tag === tag; });
+      feed.innerHTML = list.length ? list.map(function (p, i) {
+        var big = p.big && tag === 'all';
+        return '<article class="post' + (big ? ' post--big' : '') + (p.img ? '' : ' post--text') + '">' +
+          (p.img ? '<img class="post__img" src="' + p.img + '" alt="" loading="lazy">' : '') +
+          '<p class="post__meta"><b>' + names[p.tag] + '</b> · ' + p.date + '</p>' +
+          '<p class="post__text">' + p.text + '</p></article>';
+      }).join('') : '<p class="news__empty">Пока таких постов нет.</p>';
+    }
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        render(b.dataset.tag);
+      });
+    });
+    render('all');
+  })();
+</script>
+</body>
+</html>
